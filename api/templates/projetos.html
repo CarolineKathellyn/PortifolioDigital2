@@ -1,0 +1,243 @@
+{% extends "base.html" %}
+
+{% block title %}<title>Projetos</title>{% endblock %}
+
+
+{% block content %}
+
+<body>
+  <header id="top" class="navbar">
+      <img src="/static/img/logo_azul.png">
+      <div class="navbar_hamburguer">
+          <div class="navbar_hamburguer_linha">
+          </div>
+          <div class="navbar_hamburguer_linha">
+          </div>
+          <div class="navbar_hamburguer_linha">
+          </div>
+      </div>
+      <nav class="navbar_menu">
+          <a href="/" class="navbar_menu_item" id="nav_home">Home</a>
+          <a href="/formacao" class="navbar_menu_item" id="nav_formacao">Formação</a>
+          <a href="/projetos" class="navbar_menu_item" id="nav_projetos">Projetos</a>
+      </nav>
+
+  </header>
+
+  <hr class="divisoria_navbar">
+
+  
+
+  <main class="margem">
+
+      <section class="hero_banner_compacto">
+          <h1 class="hero_banner_compacto_titulo">Projetos</h1>
+
+      </section>
+
+      <hr>
+
+      <section class="projetos">
+          <div class="projetos_card_wrapper" id="projeto_wrapper">
+              
+              <div class="card_projeto" id="card_projeto">
+                  <img class="card_projeto_imagem" src="/static/img/prostock.png">
+                  <h1 class="card_projeto_titulo">PROSTOCK</h1>
+                  <p class="card_projeto_desc">(FATEC API - 2° SEM) O  projeto é um Sistema de Controle de Estoque focado em fornecer uma gestão integrada e eficiente para organizações.</p>
+                  <div class="card_projeto_botoes">
+                      <a href="https://github.com/EquipeSkyfall/API_2Semestre" target="_blank" class="card_projeto_botao">Repositório</a>
+                      <div class="card_projeto_botao_modal" id="modal_data1"><img src=""></div>
+                  </div>
+              </div>
+              
+              <div class="card_projeto" id="card_projeto">
+                  <img class="card_projeto_imagem" src="/static/img/apigreentech.png">
+                  <h1 class="card_projeto_titulo">Greentech</h1>
+                  <p class="card_projeto_desc">(FATEC API - 1° SEM) Site para um projeto de uma estufa inteligente, onde capta dados de umidade,temperatura,volume dgua de uma planta, apartir de sensores</p>
+                  <div class="card_projeto_botoes">
+                      <a href="https://github.com/TeamHiveAPI/API-2024.01" target="_blank" class="card_projeto_botao">Repositório</a>
+                      <div class="card_projeto_botao_modal" id="modal_data9"><img src=""></div>
+                  </div>
+              </div>
+              
+              <div class="card_projeto" id="card_projeto">
+                  <img class="card_projeto_imagem" src="/static/img/xiao.png">
+                  <h1 class="card_projeto_titulo">GenshinImpact</h1>
+                  <p class="card_projeto_desc">Site para GenshinImpact integrado com Flask e um banco de dados (MySQL)</p>
+                  <div class="card_projeto_botoes">
+                      <a href="https://github.com/CarolineKathellyn" target="_blank" class="card_projeto_botao">Repositório</a>
+                      <div class="card_projeto_botao_modal" id="modal_data2"><img src=""></div>
+                  </div>
+              </div>
+              
+              <div class="card_projeto" id="card_projeto">
+                  <img class="card_projeto_imagem" src="/static/img/portifolio1.png">
+                  <h1 class="card_projeto_titulo">Portfólio</h1>
+                  <p class="card_projeto_desc">Portfólio pessoal </p>
+                  <div class="card_projeto_botoes">
+                      <a href="/" target="_blank" class="card_projeto_botao">Repositorio</a>
+                      <div class="card_projeto_botao_modal" id="modal_data3"><img src=""></div>
+                  </div>
+              </div>
+              
+        
+              
+              </div>
+              <div class="botoes_scroll">
+                  <button class="botao_scroll" onclick="rolar_tras()">
+                  <img src="/static/img/seta_scroll.png">
+                  </button>
+                  <button class="botao_scroll" onclick="rolar_frente()">
+                  <img src="/static/img/seta_scroll.png">
+                  </button>
+              </div>
+          </div>
+
+          <div class="projeto_modal">
+              <div class="projeto_modal_content">
+                  <div class="projeto_modal_cima">
+                      <p class="projeto_modal_titulo">Sobre este projeto</p>
+                      <span class="projeto_modal_close"><img src=""></span>
+                  </div>
+                  <hr>
+                  <p class="projeto_modal_titulo_menor">Descrição</p>
+                  <p id="projeto_modal_texto"></p>
+                  <p class="projeto_modal_titulo_menor">Tecnologias Utilizadas</p>
+                  <div class="projeto_modal_imagens" id="projeto_modal_imagens"></div>
+              </div>
+          </div>
+      
+          <hr>
+
+          <h2 class="projetos_titulo_nada_aqui">Projetos Pessoais</h2>
+          <div class="projetos_card_wrapper" id="projeto_wrapper_prof">
+              
+              <div class="card_projeto" id="card_projeto">
+                  <img class="card_projeto_imagem" src="">
+                  <h1 class="card_projeto_titulo">Aplicativo para pets</h1>
+                  <p class="card_projeto_desc">Aplicativo em construção para viagens com pets de todos os tamanhos,e raças de forma pratica e rapida.</p>
+                  <a href="https://github.com/CarolineKathellyn" target="_blank" class="card_projeto_botao"></a>
+
+                      <div class="card_projeto_botao_modal" id="modal_data7"><img src=""></div>
+                  </div>
+              </div>
+              
+              <div class="card_projeto" id="card_projeto">
+                  <img class="card_projeto_imagem" src="">
+                  <h1 class="card_projeto_titulo">Site de Venda de Figuras 3D</h1>
+                  <p class="card_projeto_desc">Um site para venda direta de figuras feita em uma impressora 3D</p>
+                      <a href="https://github.com/CarolineKathellyn" target="_blank" class="card_projeto_botao"></a>
+                     
+                  </div>
+              </div>
+              
+              </div>
+              <div class="botoes_scroll">
+                  <button class="botao_scroll" id="botao_scroll_prof" onclick="rolar_tras_prof()">
+                  <img src="/static/img/seta_scroll.png">
+                  </button>
+                  <button class="botao_scroll" id="botao_scroll_prof" onclick="rolar_frente_prof()">
+                  <img src="/static/img/seta_scroll.png">
+                  </button>
+              </div>
+          </div>
+
+          <hr>
+
+      </section>
+
+      <script>
+
+          /* Botões de Scroll Mobile */
+
+          /* Projetos Acadêmicos */
+      
+          const scroll_projetos = document.getElementById("projeto_wrapper");
+          var largura_card = document.getElementById("card_projeto").offsetWidth;
+
+          function rolar_frente() {
+          scroll_projetos.scrollLeft += largura_card + 22;
+          }
+
+          function rolar_tras() {
+              scroll_projetos.scrollLeft -= largura_card + 22;
+          }
+
+          /* Projetos Profissionais */
+
+          const scroll_projetos_prof = document.getElementById("projeto_wrapper_prof");
+
+          function rolar_frente_prof() {
+          scroll_projetos_prof.scrollLeft += largura_card + 22;
+          }
+
+          function rolar_tras_prof() {
+              scroll_projetos_prof.scrollLeft -= largura_card + 22;
+          }
+
+
+
+
+          /* Modais Card Projetos */
+
+          var modal = document.querySelector(".projeto_modal");
+          var fechar = document.getElementsByClassName("projeto_modal_close")[0];
+
+          fechar.onclick = function() {
+              modal.style.display = "none";
+          }
+
+          window.onclick = function(event) {
+              if (event.target == modal) {
+                  modal.style.display = "none";
+              }
+          }
+
+          var botao_modal = document.getElementsByClassName("card_projeto_botao_modal");
+
+
+          for (let x = 0; x < botao_modal.length; x++) {
+
+              botao_modal[x].addEventListener("click", function() {
+                  var id = botao_modal[x].id;
+                  document.getElementById("projeto_modal_texto").innerHTML = modal_data[id].text;
+                  var images = modal_data[id].images;
+                  var modal_imagens_div = document.getElementById("projeto_modal_imagens");
+                  modal_imagens_div.innerHTML = "";
+
+                  for (let i = 0; i < images.length; i++) {
+                      var img = document.createElement("img");
+                      img.src = images[i];
+                      img.className = "modal_imagem";
+                      modal_imagens_div.appendChild(img);
+                      }
+                      modal.style.display = "flex";
+                  });
+              }
+
+      </script>
+
+  </main>
+
+
+  <footer id="footer">
+      <div class="footer_principal">
+          <div class="parte_esquerdo">
+              <p>Desenvolvido por Kathellyn Caroline</p>
+          </div>
+          <div class="parte_direito">
+              <div class="parte_direito_cima">
+                  <a href="https://www.linkedin.com/in/kathellyn-caroline-a562101b9/" target="_blank"> <img src="/static/img/linkedin.png"></a>
+                  <a href="https://github.com/CarolineKathellyn" target="_blank"> <img src="/static/img/github.png"></a>
+                  <a href="https://www.instagram.com/carolinekathellyn/" target="_blank"> <img src="/static/img/instagram.png"></a>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  <script src="/static/script.js"></script>
+
+</body>
+
+</html>
+      {% endblock %}

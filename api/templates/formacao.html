@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block title %}<title>Formação</title>{% endblock %}
+
+
+{% block content %}
+
+<body>
+    <header id="top" class="navbar">
+        <img src="/static/img/logo_azul.png">
+        <div class="navbar_hamburguer">
+            <div class="navbar_hamburguer_linha">
+            </div>
+            <div class="navbar_hamburguer_linha">
+            </div>
+            <div class="navbar_hamburguer_linha">
+            </div>
+        </div>
+        <nav class="navbar_menu">
+            <a href="/" class="navbar_menu_item" id="nav_home">Home</a>
+            <a href="/formacao" class="navbar_menu_item" id="nav_formacao">Formação</a>
+            <a href="/projetos" class="navbar_menu_item" id="nav_projetos">Projetos</a>
+        </nav>
+
+    </header>
+
+    <hr class="divisoria_navbar">
+
+    
+
+    <main class="margem">
+
+        <section class="hero_banner_compacto">
+            <h1 class="hero_banner_compacto_titulo">Formação</h1>
+        </section>
+
+        <hr>
+
+        <section>
+            <h1 class="card_cursos_titulo">Instituições de ensino:</h1>
+            <div class="card_cursos_wrapper">
+
+                
+                <div class="card_curso">
+                    <h1>FATEC São José dos Campos - Prof. Jessen Vidal</h1>
+                    <p>Tecnólogo em Analise e Desenvolvimento de Sistemas</p>
+                    <p class="card_curso_data">2018 - 2021</p>
+
+                    <div class="card_curso_extendido">
+                        <hr class="card_curso_hr">
+
+        
+                    </div>
+                </div>
+                <div class="card_curso">
+                    <h1>FATEC São José dos Campos - Prof. Jessen Vidal</h1>
+                    <p>Tecnologo em Banco de Dados</p>
+                    <p class="card_curso_data">2019 - 2021</p>
+
+                    <div class="card_curso_extendido">
+                        <hr class="card_curso_hr">
+                    </div>
+                </div>
+
+                <div class="card_curso">
+                    <h1>FATEC São José dos Campos - Prof. Jessen Vidal</h1>
+                    <p>Tecnologo em Desenvolvimento de software multiplataforma</p>
+                    <p class="card_curso_data">2024 - 2026</p>
+                    <div class="card_curso_extendido">
+                        <hr class="card_curso_hr">
+                    </div>
+                </div>
+                <div class="card_curso">
+                    <h1>IFSP</h1>
+                    <p>Tecnico em Automação Industrial</p>
+                    <p class="card_curso_data">2016 - 2018</p>
+                    <div class="card_curso_extendido">
+                        <hr class="card_curso_hr">
+                    </div>
+                </div>
+                <div class="card_curso">
+                    <h1>Bootcamp Generation</h1>
+                    <p>Desenvolvimento fullstack em Java</p>
+                    <p class="card_curso_data"></p>
+                    <div class="card_curso_extendido">
+                        <hr class="card_curso_hr">
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <script>
+            var cards_curso = document.querySelectorAll(".card_curso");
+            var extensao = document.querySelectorAll(".card_curso_extendido");
+            var botoes_ler_mais = document.querySelectorAll(".card_curso_botao#ler_mais");
+            var botoes_ler_menos = document.querySelectorAll(".card_curso_botao#ler_menos");
+
+            for (let i = 0; i < cards_curso.length; i++) {
+                botoes_ler_mais[i].addEventListener("click", function() {
+                    extensao[i].style.display = "block";
+                    botoes_ler_mais[i].style.display = "none";
+                    cards_curso[i].classList.add("borda_azul_ativo");
+                });
+            
+                botoes_ler_menos[i].addEventListener("click", function() {
+                    extensao[i].style.display = "none";
+                    botoes_ler_mais[i].style.display = "block";
+                    cards_curso[i].classList.remove("borda_azul_ativo");
+                });
+            }
+        </script>
+
+        <hr>
+        </section>
+
+    </main>
+
+
+    <footer id="footer">
+        <div class="footer_principal">
+            <div class="parte_esquerdo">
+                <p>Desenvolvido por Kathellyn Caroline</p>
+            </div>
+            <div class="parte_direito">
+                <div class="parte_direito_cima">
+                    <a href="https://www.linkedin.com/in/kathellyn-caroline-a562101b9/" target="_blank"> <img src="/static/img/linkedin.png"></a>
+                    <a href="https://github.com/CarolineKathellyn" target="_blank"> <img src="/static/img/github.png"></a>
+                    <a href="https://www.instagram.com/carolinekathellyn/" target="_blank"> <img src="/static/img/instagram.png"></a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>
+{% endblock %}
